@@ -22,6 +22,13 @@
             #binding-cells = <0>;
             bindings = <&kp ESC>, <&kp GRAVE>, <&kp TILDE>;
         };
+
+        TD_QUOTE_PIPE: TD_QUOTE_PIPE {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_QUOTE_PIPE";
+            #binding-cells = <0>;
+            bindings = <&kp SQT>, <&kp PIPE>, <&kp BACKSLASH>;
+        };
     };
 
     keymap {
@@ -38,7 +45,7 @@
 
             bindings = <
 &kp TAB             &kp Q             &kp W               &kp E           &kp R  &kp T        &kp Y      &kp U  &kp I      &kp O    &kp P                 &kp BSPC
-&kp LEFT_GUI        &mt LEFT_SHIFT A  &mt LEFT_CONTROL S  &mt LEFT_ALT D  &kp F  &kp G        &kp H      &kp J  &kp K      &kp L    &mt RIGHT_SHIFT SEMI  &kp SQT
+&kp LEFT_GUI        &mt LEFT_SHIFT A  &mt LEFT_CONTROL S  &mt LEFT_ALT D  &kp F  &kp G        &kp H      &kp J  &kp K      &kp L    &mt RIGHT_SHIFT SEMI  &TD_QUOTE_PIPE
 &toggle_bt_layer 3  &kp Z             &kp X               &kp C           &kp V  &kp B        &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH              &TD_ESC_TICK
                                                           &kp LGUI        &mo 1  &kp ENTER    &kp SPACE  &mo 2  &kp RALT
             >;
