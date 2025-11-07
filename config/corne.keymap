@@ -31,6 +31,13 @@
             #binding-cells = <0>;
             bindings = <&kp SQT>, <&kp PIPE>, <&kp BACKSLASH>;
         };
+
+        TD_TAB_CAPs: TD_TAB_CAPs {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_TAB_CAPS";
+            #binding-cells = <0>;
+            bindings = <&kp TAB>, <&kp CAPSLOCK>;
+        };
     };
 
     keymap {
